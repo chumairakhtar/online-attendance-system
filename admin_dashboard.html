@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>Welcome Admin (ALI)</h2>
+<p>Online Attendance Management System</p>
+
+<hr>
+
+<h3>Admin Controls</h3>
+
+<ul>
+    <li>
+        <a href="{{ url_for('admin_teachers') }}">
+            Manage Teachers (Add / Delete / Edit)
+        </a>
+    </li>
+
+    <li>
+        <a href="{{ url_for('admin_students') }}">
+            Manage Students (Add / Delete / Edit)
+        </a>
+    </li>
+
+     <li>
+        <a href="{{ url_for('admin_attendance') }}">
+        Edit Student Attendance (Admin Only)
+        </a>
+     </li>
+ 
+</ul>
+
+<hr>
+
+<a class="logout" href="{{ url_for('logout') }}">Logout</a>
+
+{% endblock %}

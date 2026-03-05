@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>Admin – Edit Attendance</h2>
+<p>Only Admin can modify attendance records</p>
+
+<table>
+    <tr>
+        <th>Student</th>
+        <th>Roll No</th>
+        <th>Subject</th>
+        <th>Date</th>
+        <th>Status</th>
+        <th>Action</th>
+    </tr>
+
+    {% for r in records %}
+    <tr class="{% if r.edited_by_admin %}absent-row{% endif %}">
+        <td>{{ r.name }}</td>
+        <td>{{ r.roll_no }}</td>
+        <td>{{ r.subject }}</td>
+        <td>{{ r.date }}</td>
+        <td>
+            {{ r.status }}
+            {% if r.edited_by_admin %}
+                <small>(Edited)</small>
+            {% endif %}
+        </td>
+        <td>
+            {% if r.status == "Absent" %}
+                <a href="{{ url_for('admin_update_attendance', att_id=r.id, new_status='Present') }}">
+                    Mark Present
+                </a>
+            {% else %}
+                —
+            {% endif %}
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+
+<br>
+<a href="{{ url_for('admin_dashboard') }}">⬅ Back to Dashboard</a>
+
+{% endblock %}

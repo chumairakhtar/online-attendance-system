@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>Online Attendance Management System</h2>
+
+<p>Please select how you want to login</p>
+
+<hr>
+
+<div style="text-align: center;">
+    <a href="{{ url_for('admin_login') }}">
+        <button>Login as Admin</button>
+    </a>
+
+    <br><br>
+
+    <a href="{{ url_for('teacher_login') }}">
+        <button>Login as Teacher</button>
+    </a>
+</div>
+
+{% endblock %}

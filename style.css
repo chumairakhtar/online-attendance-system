@@ -1,0 +1,181 @@
+/* =========================
+   GLOBAL RESET
+========================= */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+}
+
+/* =========================
+   GLOBAL BACKGROUND
+========================= */
+body {
+    background: linear-gradient(135deg, #f1f3f5, #e9ecef);
+    color: #212529;
+}
+
+/* =========================
+   HEADER
+========================= */
+.main-header {
+    background: linear-gradient(90deg, #8b0000, #b11226);
+    color: white;
+    padding: 22px;
+    text-align: center;
+}
+
+.main-header h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+.main-header p {
+    margin-top: 6px;
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+/* =========================
+   MAIN CONTAINER (ALL PAGES)
+========================= */
+.container {
+    background: #ffffff;
+    width: 94%;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+}
+
+/* =========================
+   HEADINGS
+========================= */
+h1, h2, h3 {
+    color: #8b0000;
+    margin-bottom: 15px;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background: #dee2e6;
+    margin: 20px 0;
+}
+
+/* =========================
+   FORMS
+========================= */
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 14px;
+    border-radius: 6px;
+    border: 1px solid #ced4da;
+    font-size: 14px;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: #8b0000;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+button,
+input[type="submit"] {
+    background-color: #8b0000;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s ease;
+}
+
+button:hover,
+input[type="submit"]:hover {
+    background-color: #b11226;
+}
+
+/* =========================
+   TABLE DESIGN (ALL TABLES)
+========================= */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th {
+    background-color: #8b0000;
+    color: #ffffff;
+    padding: 12px;
+    text-align: left;
+}
+
+td {
+    padding: 10px;
+    border-bottom: 1px solid #dee2e6;
+    color: #212529;
+}
+
+/* Zebra rows (soft) */
+tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+/* =========================
+   ATTENDANCE STATUS COLORS
+========================= */
+.present-row {
+    background-color: #e6f4ea !important;
+    color: #1b5e20;
+}
+
+.absent-row {
+    background-color: #fdecea !important;
+    color: #7f0000;
+}
+
+/* =========================
+   LINKS
+========================= */
+a {
+    color: #8b0000;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* =========================
+   FOOTER
+========================= */
+.main-footer {
+    text-align: center;
+    padding: 15px;
+    background: #212529;
+    color: #dee2e6;
+    font-size: 14px;
+    margin-top: 40px;
+}
+
+/* =========================
+   LOGOUT / SMALL ACTIONS
+========================= */
+.logout {
+    margin-top: 20px;
+    display: inline-block;
+}

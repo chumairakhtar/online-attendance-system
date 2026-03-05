@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Online Attendance Management System</title>
+
+    <!-- Responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- GLOBAL CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <!-- TOP HEADER -->
+    <header class="main-header">
+        <h1>Online Attendance Management System</h1>
+        <p>University Level Project</p>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="container">
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="main-footer">
+        <p>
+            © {{ 2026 }} | Developed by <strong>Umair Akhtar</strong><br>
+            Department of Computer Science
+        </p>
+    </footer>
+
+</body>
+</html>

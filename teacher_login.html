@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>Teacher Login</h2>
+
+<form method="post">
+    <label>Email</label>
+    <input type="email" name="email" placeholder="Enter your email" required>
+
+    <label>Password</label>
+    <input type="password" name="password" placeholder="Enter your password" required>
+
+    <button type="submit">Login</button>
+</form>
+
+<hr>
+
+<a href="{{ url_for('index') }}">⬅ Back</a>
+
+{% endblock %}

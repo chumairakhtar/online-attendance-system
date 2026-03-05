@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>Welcome, {{ session.teacher_name }}</h2>
+<p>Teacher Panel – Online Attendance Management System</p>
+
+<hr>
+
+<ul>
+    <li>
+        <a href="{{ url_for('mark_attendance') }}">
+            Mark Attendance
+        </a>
+    </li>
+
+    <li>
+        <a href="{{ url_for('weekly_report') }}">
+            Download Weekly Attendance (PDF)
+        </a>
+    </li>
+
+    <li>
+        <a href="{{ url_for('monthly_report') }}">
+            Download Monthly Attendance (PDF)
+        </a>
+    </li>
+</ul>
+
+<hr>
+
+<a class="logout" href="{{ url_for('logout') }}">Logout</a>
+
+{% endblock %}

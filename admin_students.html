@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>Admin Panel – Manage Students</h2>
+
+<hr>
+
+<h3>Add New Student</h3>
+
+<form method="post" action="{{ url_for('admin_add_student') }}">
+    <input type="text" name="name" placeholder="Student Name" required>
+    <input type="text" name="roll_no" placeholder="Roll Number" required>
+    <input type="email" name="email" placeholder="Student Email" required>
+
+    <button type="submit">Add Student</button>
+</form>
+
+<hr>
+
+<h3>Student List</h3>
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Roll No</th>
+        <th>Email</th>
+        <th>Action</th>
+    </tr>
+
+    {% for s in students %}
+    <tr>
+        <td>{{ s.name }}</td>
+        <td>{{ s.roll_no }}</td>
+        <td>{{ s.email }}</td>
+        <td>
+            <a href="{{ url_for('admin_delete_student', id=s.id) }}"
+               onclick="return confirm('Delete this student?')">
+               Delete
+            </a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+
+<hr>
+
+<a href="{{ url_for('admin_dashboard') }}">⬅ Back to Admin Dashboard</a>
+
+{% endblock %}
